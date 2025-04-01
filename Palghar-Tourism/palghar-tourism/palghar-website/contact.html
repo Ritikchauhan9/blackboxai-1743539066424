@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Palghar Tourism for inquiries, bookings, and travel assistance. Get in touch with our team for the perfect Palghar experience.">
+    <meta name="keywords" content="contact Palghar tourism, Palghar travel inquiry, book Palghar tour, Maharashtra tourism contact">
+    <title>Contact Us | Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-primary font-semibold">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-primary font-semibold">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[40vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e" 
+                 alt="Contact Palghar Tourism" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Get in touch with us for any inquiries or assistance
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Phone -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Phone</h3>
+                    <p class="text-gray-600">N/A</p>
+                    <p class="text-gray-600">N/A</p>
+                </div>
+
+                <!-- Email -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Email</h3>
+                    <p class="text-gray-600">palghartourisms@gmail.com</p>
+                </div>
+
+                <!-- Address -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Address</h3>
+                    <p class="text-gray-600">Tourism Information Center</p>
+                    <p class="text-gray-600">Palghar, Maharashtra, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Send us a Message</h2>
+                
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <input type="text" 
+                                   id="name" 
+                                   name="name" 
+                                   required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                                   placeholder="Your name">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                                   placeholder="Your email">
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+                        <input type="tel" 
+                               id="phone" 
+                               name="phone" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                               placeholder="Your phone number">
+                    </div>
+
+                    <!-- Subject -->
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+                        <select id="subject" 
+                                name="subject" 
+                                required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="booking">Booking Request</option>
+                            <option value="package">Tour Package</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                        <textarea id="message" 
+                                  name="message" 
+                                  required 
+                                  rows="6" 
+                                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                                  placeholder="Your message"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" 
+                                class="bg-primary hover:bg-secondary text-white font-semibold px-8 py-3 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Find Us</h2>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240745.89512289246!2d72.76269854794924!3d19.69661880683037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c6c63ee1c15%3A0x85e3c5b6e48b3cab!2sPalghar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645523452489!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-2">What are the best times to visit Palghar?</h3>
+                    <p class="text-gray-600">
+                        The best time to visit Palghar is from October to March when the weather is pleasant and perfect for outdoor activities.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-2">How can I book accommodations in Palghar?</h3>
+                    <p class="text-gray-600">
+                        You can book accommodations through our website, email, or phone. We recommend booking in advance during peak season.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-2">Are guided tours available?</h3>
+                    <p class="text-gray-600">
+                        Yes, we offer various guided tours including heritage walks, nature trails, and cultural tours. Contact us for details.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <div class="mt-2">
+                    <a href="terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
