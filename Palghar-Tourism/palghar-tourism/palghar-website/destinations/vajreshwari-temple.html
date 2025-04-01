@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit the sacred Vajreshwari Temple in Palghar - an ancient shrine known for its spiritual significance, hot springs, and peaceful atmosphere.">
+    <title>Vajreshwari Temple - Palghar Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">Palghar Tourism</a>
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-20">
+            <div class="h-[60vh] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1582547094485-13504c887fb7" 
+                     alt="Vajreshwari Temple view" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center">
+                    <div class="text-white">
+                        <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Vajreshwari Temple</h1>
+                        <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                            A sacred shrine with healing hot springs
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Main Content -->
+                    <div class="md:col-span-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">About Vajreshwari Temple</h2>
+                            <p class="text-gray-600 mb-4">
+                                Vajreshwari Temple is an ancient shrine dedicated to Goddess Vajreshwari, built on a hillock surrounded by hot springs. The temple is known for its spiritual significance and the healing properties of its natural hot springs.
+                            </p>
+                            <p class="text-gray-600">
+                                The temple complex includes several smaller shrines and hot water kunds (pools) that are believed to have medicinal properties. The peaceful atmosphere and scenic location make it a popular destination for both pilgrims and tourists.
+                            </p>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div class="space-y-4">
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Temple Highlights</h2>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Main Temple</h3>
+                                <p class="text-gray-600">Ancient architecture and spiritual ambiance of the main shrine.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Hot Springs</h3>
+                                <p class="text-gray-600">Natural hot water springs with therapeutic properties.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Sacred Pools</h3>
+                                <p class="text-gray-600">Different kunds for ritual bathing and healing purposes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Activities -->
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Things to Do</h2>
+                            <ul class="space-y-4 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-pray text-primary mr-2"></i>
+                                    Attend morning and evening aartis
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-hot-tub text-primary mr-2"></i>
+                                    Take a dip in the hot springs
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-camera text-primary mr-2"></i>
+                                    Photography (exterior only)
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-store text-primary mr-2"></i>
+                                    Shop for religious items
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Temple Information</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><i class="fas fa-clock mr-2"></i>Timings: 5 AM - 9 PM</li>
+                                <li><i class="fas fa-calendar mr-2"></i>Best Time: Year-round</li>
+                                <li><i class="fas fa-camera-retro mr-2"></i>Photography: Restricted</li>
+                                <li><i class="fas fa-shoe-prints mr-2"></i>Footwear: Not allowed inside</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><strong>By Bus:</strong> Regular buses from Palghar</li>
+                                <li><strong>By Train:</strong> Nearest station - Virar</li>
+                                <li><strong>By Car:</strong> Well-connected by road</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Visitor Tips</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li>Dress modestly</li>
+                                <li>Carry towel for hot springs</li>
+                                <li>Visit early morning</li>
+                                <li>Respect temple customs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
