@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Find the perfect place to stay in Palghar. Browse hotels, resorts, homestays, and budget accommodations for your perfect vacation.">
+    <meta name="keywords"
+        content="Palghar hotels, Palghar resorts, beach resorts, homestays, budget hotels, Maharashtra tourism">
+    <title>Places to Stay in Palghar | Hotels & Accommodations | Palghar Tourism</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/palghar-tourism/palghar-website/destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="/palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-primary font-semibold">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="/palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/palghar-tourism/palghar-website/destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="/palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-primary font-semibold">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                alt="Luxury accommodation in Palghar" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Places to Stay</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Find your perfect accommodation in Palghar, from luxury resorts to cozy homestays
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation Types -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Where to Stay</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Beach Resorts -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-umbrella-beach text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Beach Resorts</h3>
+                    <p class="text-gray-600">Luxury stays with ocean views</p>
+                </div>
+
+                <!-- Hotels -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-hotel text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Hotels</h3>
+                    <p class="text-gray-600">Comfortable city accommodations</p>
+                </div>
+
+                <!-- Homestays -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-home text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Homestays</h3>
+                    <p class="text-gray-600">Experience local hospitality</p>
+                </div>
+
+                <!-- Budget Stays -->
+                <div class="bg-light rounded-lg p-6 shadow-lg text-center">
+                    <i class="fas fa-wallet text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-2">Budget Stays</h3>
+                    <p class="text-gray-600">Affordable accommodation options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Accommodations -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Featured Accommodations</h2>
+
+            <!-- Luxury Resorts -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-8">Luxury Beach Resorts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Resort 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                            alt="Luxury beach resort" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Oceanfront Resort & Spa</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">5.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Luxury beachfront resort with spa facilities and ocean views.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹8,000/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resort 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Beach villa"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Sunset Beach Resort</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.5</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Private beach access with luxury amenities and dining.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹6,500/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resort 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d" alt="Beachside resort"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Palm Grove Resort</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Peaceful retreat with garden views and beach access.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹5,500/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homestays -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-8">Cozy Homestays</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Homestay 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587874522487-fe10e954d035"
+                            alt="Traditional homestay" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Traditional Village Homestay</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.5</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Experience traditional lifestyle with modern comforts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹2,500/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Homestay 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566195992011-5f6b21e539aa" alt="Family homestay"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Family Homestay</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Comfortable stay with home-cooked meals and local guidance.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹2,000/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Homestay 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574739782594-db4ead022697" alt="Garden homestay"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Garden View Homestay</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Peaceful stay surrounded by nature and gardens.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹1,800/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Hotels -->
+            <div>
+                <h3 class="text-2xl font-bold text-primary mb-8">Budget-Friendly Hotels</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Hotel 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a" alt="Budget hotel"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">City View Hotel</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">3.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Basic amenities with convenient location.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹1,200/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a" alt="Budget stay"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Tourist Lodge</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">3.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Simple accommodation for budget travelers.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹1,000/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a" alt="Economy hotel"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-primary mb-2">Economy Inn</h4>
+                            <div class="flex items-center mb-2">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">3.0</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Affordable rooms with essential amenities.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold">₹800/night</span>
+                                <a href="/palghar-tourism/palghar-website/contact.html"
+                                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition duration-300">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Tips -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Booking Tips</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Season Tips -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-calendar-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Best Time to Book</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Book 2-3 months in advance for peak season</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Weekend rates are higher</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Off-season discounts available</li>
+                    </ul>
+                </div>
+
+                <!-- What to Consider -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-clipboard-check text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">What to Consider</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Location and accessibility</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Amenities included</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Cancellation policy</li>
+                    </ul>
+                </div>
+
+                <!-- Payment Tips -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-credit-card text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Payment Tips</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Carry cash for local stays</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Credit cards accepted at resorts</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Check for hidden charges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/palghar-tourism/palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+    <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+    <div class="mt-2">
+        <a href="/palghar-tourism/palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> |
+        <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
