@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit Dahanu Beach in Palghar - Known for its pristine waters, Chikoo orchards, and peaceful ambiance. Plan your perfect beach getaway.">
+    <meta name="keywords" content="Dahanu Beach, Palghar beaches, Maharashtra tourism, Chikoo farms, weekend getaway">
+    <title>Dahanu Beach - Pristine Waters & Chikoo Orchards | Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/palghar-tourism/palghar-website/destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="/palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="/palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/palghar-tourism/palghar-website/destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="/palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                 alt="Scenic view of Dahanu Beach" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Dahanu Beach</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Experience the serene beauty of this pristine coastal paradise
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="py-8 bg-white shadow-md relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Best Time -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-clock text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Best Time to Visit</h3>
+                        <p class="text-gray-600">October to March</p>
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-hourglass-half text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Ideal Duration</h3>
+                        <p class="text-gray-600">1-2 Days</p>
+                    </div>
+                </div>
+
+                <!-- Distance -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-route text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Distance from Mumbai</h3>
+                        <p class="text-gray-600">140 km</p>
+                    </div>
+                </div>
+
+                <!-- Activities -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-umbrella-beach text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Activities</h3>
+                        <p class="text-gray-600">Swimming, Sunbathing, Water Sports</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-6">About Dahanu Beach</h2>
+                    <p class="text-gray-600 mb-4">
+                        Dahanu Beach, located in the Palghar district of Maharashtra, is a pristine coastal destination known for its clean waters and peaceful atmosphere. The beach stretches for several kilometers, offering visitors plenty of space to relax and enjoy the natural beauty.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        What makes Dahanu unique is its surrounding Chikoo (Sapodilla) orchards, which have earned it the nickname "Chikoo Bowl of Maharashtra". The combination of beach tourism and agricultural heritage creates a distinctive experience for visitors.
+                    </p>
+                    <p class="text-gray-600">
+                        The beach is relatively less crowded compared to other beaches near Mumbai, making it perfect for those seeking a peaceful getaway from the city's hustle and bustle.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                         alt="Sunset at Dahanu Beach" 
+                         class="rounded-lg shadow-lg w-full">
+                    <p class="text-sm text-gray-500 italic text-center">
+                        Beautiful sunset views at Dahanu Beach
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Things to Do -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Things to Do</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Beach Activities -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-swimming-pool text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Beach Activities</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Swimming in clear waters</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Sunbathing on clean sands</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Beach walking and jogging</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Photography opportunities</li>
+                    </ul>
+                </div>
+
+                <!-- Chikoo Farms -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-tree text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Visit Chikoo Farms</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Farm tours available</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Fresh fruit picking</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Learn about cultivation</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Buy fresh produce</li>
+                    </ul>
+                </div>
+
+                <!-- Local Experiences -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-utensils text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Local Experiences</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Seafood restaurants</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Local market visits</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Sunset viewing</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Cultural interactions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Reach -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">How to Reach</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- By Train -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-train text-3xl text-primary mr-4"></i>
+                        <h3 class="text-xl font-bold text-primary">By Train</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Dahanu Road railway station is well-connected to Mumbai via Western Railway. Regular local trains and express trains are available.
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        Distance from station to beach: 3 km
+                    </p>
+                </div>
+
+                <!-- By Road -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-3xl text-primary mr-4"></i>
+                        <h3 class="text-xl font-bold text-primary">By Road</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Take NH48 from Mumbai towards Gujarat. The journey takes approximately 3 hours by car. Regular ST buses also available from Mumbai.
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        Distance from Mumbai: 140 km
+                    </p>
+                </div>
+
+                <!-- Local Transport -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-auto-rickshaw text-3xl text-primary mr-4"></i>
+                        <h3 class="text-xl font-bold text-primary">Local Transport</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Auto-rickshaws and taxis are readily available from Dahanu Road station to the beach. You can also rent bikes for local sightseeing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Best Time to Visit</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Winter -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Winter (Oct-Feb)</h3>
+                    <p class="text-gray-600">
+                        Best season to visit. Pleasant weather with temperatures ranging from 15°C to 25°C. Perfect for beach activities and sightseeing.
+                    </p>
+                </div>
+
+                <!-- Summer -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Summer (Mar-May)</h3>
+                    <p class="text-gray-600">
+                        Hot and humid. Temperatures can reach up to 35°C. Early morning or evening visits recommended.
+                    </p>
+                </div>
+
+                <!-- Monsoon -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Monsoon (Jun-Sep)</h3>
+                    <p class="text-gray-600">
+                        Heavy rainfall. Beach activities restricted. Beautiful green landscapes but not ideal for tourism.
+                    </p>
+                </div>
+
+                <!-- Peak Season -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Peak Season</h3>
+                    <p class="text-gray-600">
+                        December-February sees maximum tourists. Book accommodations in advance during weekends and holidays.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & Guidelines -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Tips & Guidelines</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Do's</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Carry sunscreen and beach essentials</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Visit during early morning or sunset</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Try local seafood specialties</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Respect local customs and culture</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Carry cash as cards might not work everywhere</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Don'ts</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Don't litter on the beach</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Avoid swimming during high tide</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Don't venture deep into the sea</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Don't disturb marine life</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Avoid beach activities during monsoon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Nearby Attractions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Bordi Beach -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                         alt="Bordi Beach" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Bordi Beach</h3>
+                        <p class="text-gray-600 mb-4">
+                            Another beautiful beach known for its white sand and casuarina trees. Distance: 20 km
+                        </p>
+                        <a href="/destinations/bordi-beach.html" 
+                           class="text-primary hover:text-secondary font-semibold">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Chikoo Farms -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1591857177593-aec9bc535394" 
+                         alt="Chikoo Farms" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Chikoo Farms</h3>
+                        <p class="text-gray-600 mb-4">
+                            Visit the famous Chikoo orchards and learn about fruit cultivation. Distance: 5 km
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Local Market -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e" 
+                         alt="Local Market" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Dahanu Market</h3>
+                        <p class="text-gray-600 mb-4">
+                            Explore local markets for fresh fruits, seafood, and handicrafts. Distance: 2 km
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/palghar-tourism/palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+     <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+<div class="mt-2">
+        <a href="/palghar-tourism/palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+        <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
