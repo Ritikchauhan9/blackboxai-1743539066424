@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Shirgaon Fort in Palghar - a historic coastal fort offering panoramic views of the Arabian Sea and rich maritime heritage.">
+    <title>Shirgaon Fort - Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                 alt="Shirgaon Fort aerial view" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+                <div class="text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Shirgaon Fort</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        A historic coastal fortress with panoramic sea views
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="md:col-span-2 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">About Shirgaon Fort</h2>
+                        <p class="text-gray-600 mb-4">
+                            Shirgaon Fort is a historic coastal fortification that stands as a testament to Maharashtra's rich maritime history. Built in the 16th century, this fort played a crucial role in defending the coastline against naval invasions.
+                        </p>
+                        <p class="text-gray-600">
+                            The fort's strategic location offers breathtaking views of the Arabian Sea and surrounding landscape. Its well-preserved architecture and historical significance make it a must-visit destination for history enthusiasts and photographers alike.
+                        </p>
+                    </div>
+
+                    <!-- Historical Significance -->
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">Historical Significance</h2>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Portuguese Era</h3>
+                                <p class="text-gray-600">
+                                    Originally built by the Portuguese in the 16th century, the fort served as a crucial defensive structure along the Konkan coast.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Maratha Period</h3>
+                                <p class="text-gray-600">
+                                    Later captured by the Marathas, who further strengthened its fortifications and used it as a strategic outpost.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Architectural Features</h3>
+                                <p class="text-gray-600">
+                                    The fort showcases a blend of Portuguese and Maratha architectural styles, with bastions, wells, and watch towers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Things to See -->
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">Things to See</h2>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-fort-awesome text-primary mr-2"></i>
+                                Main entrance gate and bastions
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-water text-primary mr-2"></i>
+                                Ancient wells and water systems
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-eye text-primary mr-2"></i>
+                                Panoramic views from watchtowers
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-camera text-primary mr-2"></i>
+                                Photography opportunities
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-hiking text-primary mr-2"></i>
+                                Walking trails and ramparts
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <!-- Quick Info -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">Quick Information</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-2"></i>
+                                <span>Best Time: October to March</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                                <span>Location: Shirgaon, Palghar</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-2"></i>
+                                <span>Visiting Hours: 6 AM - 6 PM</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-ticket-alt text-primary mr-2"></i>
+                                <span>Entry: Free</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- How to Reach -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                        <div class="space-y-3 text-gray-600">
+                            <div>
+                                <h4 class="font-bold">By Train:</h4>
+                                <p>Nearest station: Palghar (4km)</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">By Road:</h4>
+                                <p>Regular buses from Palghar city</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">By Car:</h4>
+                                <p>Well-connected via local roads</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips for Visitors -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">Tips for Visitors</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>Wear comfortable walking shoes</li>
+                            <li>Carry water and snacks</li>
+                            <li>Best visited during early morning</li>
+                            <li>Bring camera for photography</li>
+                            <li>Local guide recommended</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-primary text-center mb-8">Photo Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                     alt="Shirgaon Fort walls" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                     alt="Fort entrance" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                     alt="Sea view from fort" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../palghar-tourism/palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="../destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="../palghar-tourism/palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="../contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+     <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+<div class="mt-2">
+        <a href="/palghar-tourism/palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+        <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
