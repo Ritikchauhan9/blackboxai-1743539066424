@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Brands - Palghar Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Previous styles remain the same */
+        .brand-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+            perspective: 1000px;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .brand-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, rgba(27, 73, 101, 0.95), rgba(98, 182, 203, 0.95));
+            backdrop-filter: blur(4px);
+            transform: scale(0.95);
+        }
+
+        .brand-card:hover .brand-overlay {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #62B6CB;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .brand-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: 2px solid transparent;
+        }
+
+        .brand-btn:hover {
+            transform: translateY(-2px);
+            background-color: transparent;
+            border-color: white;
+            color: white;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #1B4965, #62B6CB);
+            border-radius: 2px;
+        }
+
+        .brand-logo {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: grayscale(0.2);
+        }
+
+        .brand-card:hover .brand-logo {
+            transform: scale(1.05);
+            filter: grayscale(0);
+        }
+
+        .brand-description {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .brand-card:hover .brand-description {
+            color: #1B4965;
+        }
+
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            padding: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s;
+            position: relative;
+        }
+
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            width: 22px;
+            height: 2px;
+            background: #ffffff;
+            transform: rotate(0);
+            transition: all 0.5s;
+            border-radius: 2px;
+        }
+
+        .hamburger-top {
+            top: 6px;
+        }
+
+        .hamburger-middle {
+            top: 14px;
+        }
+
+        .hamburger-bottom {
+            top: 22px;
+        }
+
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translateX(6px);
+            top: 8px;
+        }
+
+        .open .hamburger-middle {
+            opacity: 0;
+        }
+
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(-6px) translateX(6px);
+            top: 20px;
+        }
+
+        .mobile-menu-link {
+            position: relative;
+            display: inline-block;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #62B6CB;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .mobile-menu-link:hover::after {
+            width: 100%;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .support-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .brand-card {
+                margin-bottom: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header with Improved Mobile Navigation -->
+    <header class="fixed w-full bg-primary shadow-lg z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-display font-bold text-white">
+                    Palghar<span class="text-secondary">Tourism</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-secondary transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-secondary transition-colors">About</a>
+                    <a href="destinations/index.html" class="nav-link text-white hover:text-secondary transition-colors">Destinations</a>
+                    <a href="activities.html" class="nav-link text-white hover:text-secondary transition-colors">Activities</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-secondary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="hamburger md:hidden focus:outline-none z-50">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu fixed top-[72px] left-0 w-full bg-primary/95 backdrop-blur-lg md:hidden">
+                <div class="flex flex-col items-center py-8 space-y-6">
+                    <a href="index.html" class="mobile-menu-link text-white hover:text-secondary transition-colors">Home</a>
+                    <a href="about.html" class="mobile-menu-link text-white hover:text-secondary transition-colors">About</a>
+                    <a href="destinations/index.html" class="mobile-menu-link text-white hover:text-secondary transition-colors">Destinations</a>
+                    <a href="activities.html" class="mobile-menu-link text-white hover:text-secondary transition-colors">Activities</a>
+                    <a href="contact.html" class="mobile-menu-link text-white hover:text-secondary transition-colors">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/00/65/e9/bordi-beach.jpg?w=1200&h=1200&s=1" 
+                 alt="Palghar Brands" 
+                 class="w-full h-full object-cover transform scale-105 transition-transform duration-10000">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-primary/40 to-primary/60"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+                <div class="text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 tracking-wide">Popular Brands</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4 font-light">
+                        Discover popular brands in Palghar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Food & Beverages -->
+            <div class="mb-20">
+                <h2 class="section-title text-3xl font-display font-bold text-primary mb-12 text-center">Food & Beverages</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Brand cards with improved layout -->
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://soufflefoodworks.com/wp-content/uploads/2019/01/logo-1.png" 
+                                     alt="Souffle Cake Shop" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Souffle Cake Shop</h3>
+                            <p class="text-gray-600 brand-description">Premium Cakes & Pastries</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 08 AM - 11 PM</p>
+                            <a href="https://soufflefoodworks.com/menu" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://logowik.com/content/uploads/images/dominos-pizza5190.jpg" 
+                                     alt="Domino's Pizza" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Domino's Pizza</h3>
+                            <p class="text-gray-600 brand-description">Pizza & Fast Food</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 11 AM - 11 PM</p>
+                            <a href="https://www.dominos.co.in/" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipMnbN7tSaYwQlU9YLv_4JtsWqt15vDAVKY64WUf=s680-w680-h510" 
+                                     alt="Janta Sweets" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Janta Sweets</h3>
+                            <p class="text-gray-600 brand-description">Traditional Indian Sweets</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 11 AM - 11 PM</p>
+                            <a href="https://g.co/kgs/Wbm6f2V" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shopping -->
+            <div class="mb-20">
+                <h2 class="section-title text-3xl font-display font-bold text-primary mb-12 text-center">Shopping</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipMA9iyWMpYixglgMQscB3auz9gyt9TaPAr2EhGv=s680-w680-h510" 
+                                     alt="Reliance Superstore" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Reliance Superstore</h3>
+                            <p class="text-gray-600 brand-description">One-Stop Shopping Destination</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 9 AM - 10 PM</p>
+                            <a href="https://www.jiomart.com/" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://jobquestjourney.com/wp-content/uploads/2024/08/Zudio-job.jpg" 
+                                     alt="Zudio" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Zudio</h3>
+                            <p class="text-gray-600 brand-description">Trendy Fashion Store</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Opening Soon</p>
+                            <a href="https://www.zudio.com/" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipPx9nLboARK1Y-tpVXfXCHpibY5jFvrm11xpJIm=s680-w680-h510" 
+                                     alt="B Mart" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">B Mart</h3>
+                            <p class="text-gray-600 brand-description">Neighborhood Supermarket</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 9 AM - 10 PM</p>
+                            <a href="https://g.co/kgs/CivDH7Z" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electronics Section -->
+            <div class="mb-20">
+                <h2 class="section-title text-3xl font-display font-bold text-primary mb-12 text-center">Electronics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipNbg-FJJCxiktu_Gv2u5AelRkTUs-7RFIkqjLrw=s680-w680-h510" 
+                                     alt="Croma" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Croma</h3>
+                            <p class="text-gray-600 brand-description">Electronics & Appliances</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 11 AM - 9 PM</p>
+                            <a href="https://maps.app.goo.gl/9JQV6MPhMQCr4pwJA" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instant Delivery Section -->
+            <div class="mb-20">
+                <h2 class="section-title text-3xl font-display font-bold text-primary mb-12 text-center">Instant Delivery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAb0zCsPzg-rGGNn-6poaFGGFF9wiUaXWy1Q&s" 
+                                     alt="Zepto" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Zepto</h3>
+                            <p class="text-gray-600 brand-description">Quick Commerce Delivery</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 9 AM - 10 PM</p>
+                            <a href="https://www.zeptonow.com/" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="brand-logo h-32 mb-6 flex items-center justify-center bg-white rounded-lg">
+                                <img src="https://logowik.com/content/uploads/images/dominos-pizza5190.jpg" 
+                                     alt="Dominos" 
+                                     class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Domino's</h3>
+                            <p class="text-gray-600 brand-description">30 Minutes Delivery</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Open daily: 9 AM - 10 PM</p>
+                            <a href="https://www.dominos.co.in/" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Section -->
+            <div class="text-center">
+                <h2 class="section-title text-3xl font-display font-bold text-primary mb-12">Support Us</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="brand-card bg-white rounded-xl overflow-hidden shadow-lg relative group">
+                        <div class="p-8">
+                            <div class="support-icon h-32 mb-6 flex items-center justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3176/3176298.png" 
+                                     alt="Support Icon" 
+                                     class="w-24 h-24 object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Help Us Grow</h3>
+                            <p class="text-gray-600 brand-description">Share information about local brands in Palghar</p>
+                        </div>
+                        <div class="brand-overlay absolute inset-0 flex flex-col justify-center items-center p-8 text-white">
+                            <p class="text-lg mb-6 font-light">Fill out our form to contribute</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEQe61iV6tuMG0PKpO3b17eEqJdumfpP7HgEUYuSJi1335Hg/viewform" 
+                               target="_blank" 
+                               class="brand-btn bg-white text-primary px-8 py-3 rounded-full font-semibold">
+                                Support Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle with improved functionality
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isMenuOpen = !isMenuOpen;
+            btn.classList.toggle('open');
+            menu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !menu.contains(e.target) && !btn.contains(e.target)) {
+                isMenuOpen = false;
+                btn.classList.remove('open');
+                menu.classList.remove('active');
+            }
+        });
+
+        // Prevent menu from closing when clicking inside it
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Close mobile menu when window is resized to desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && isMenuOpen) {
+                isMenuOpen = false;
+                btn.classList.remove('open');
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
