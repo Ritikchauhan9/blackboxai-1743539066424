@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Sitemaps
+Sitemap: https://palghartourism.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
