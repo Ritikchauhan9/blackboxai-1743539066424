@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit Bordi Beach in Palghar - famous for its Chikoo orchards, pristine shoreline, and tranquil atmosphere. Perfect for weekend getaways.">
+    <title>Bordi Beach - Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a" 
+                 alt="Bordi Beach panoramic view" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+                <div class="text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Bordi Beach</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Where golden sands meet Chikoo orchards
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="md:col-span-2 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">About Bordi Beach</h2>
+                        <p class="text-gray-600 mb-4">
+                            Bordi Beach is a unique coastal destination that combines the charm of a pristine beach with the agricultural heritage of Chikoo farming. Known for its clean shoreline and peaceful atmosphere, Bordi offers visitors a perfect blend of nature and rural life.
+                        </p>
+                        <p class="text-gray-600">
+                            The area is famous for its extensive Chikoo (Sapodilla) orchards, making it one of the largest Chikoo-producing regions in India. The combination of beach tourism and agricultural tourism makes Bordi a distinctive destination in Palghar.
+                        </p>
+                    </div>
+
+                    <!-- Attractions -->
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">Key Attractions</h2>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Chikoo Orchards</h3>
+                                <p class="text-gray-600">
+                                    Visit the famous Chikoo farms and learn about the cultivation of this sweet fruit. Many orchards offer guided tours and fresh fruit tasting experiences.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Beach Activities</h3>
+                                <p class="text-gray-600">
+                                    Enjoy the 17km long shoreline perfect for morning walks, sunbathing, and watching spectacular sunsets.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Rural Tourism</h3>
+                                <p class="text-gray-600">
+                                    Experience local village life, traditional farming practices, and authentic rural Maharashtra culture.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activities -->
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">Things to Do</h2>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-tree text-primary mr-2"></i>
+                                Visit Chikoo orchards and farms
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-umbrella-beach text-primary mr-2"></i>
+                                Beach activities and sunset viewing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-camera text-primary mr-2"></i>
+                                Photography tours
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-utensils text-primary mr-2"></i>
+                                Try local cuisine and Chikoo products
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-home text-primary mr-2"></i>
+                                Stay in traditional farmhouses
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <!-- Quick Info -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">Quick Information</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-2"></i>
+                                <span>Best Time: October to March</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                                <span>Location: Northern Palghar</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-road text-primary mr-2"></i>
+                                <span>Access: Road, Railway</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-language text-primary mr-2"></i>
+                                <span>Languages: Marathi, Hindi</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- How to Reach -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                        <div class="space-y-3 text-gray-600">
+                            <div>
+                                <h4 class="font-bold">By Train:</h4>
+                                <p>Nearest station: Bordi (Western Railway)</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">By Road:</h4>
+                                <p>Regular buses from Mumbai and Palghar</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">By Car:</h4>
+                                <p>3-hour drive from Mumbai via NH48</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">Weather</h3>
+                        <div class="space-y-3 text-gray-600">
+                            <p>Summer: 24°C - 36°C</p>
+                            <p>Winter: 16°C - 30°C</p>
+                            <p>Monsoon: June - September</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-primary text-center mb-8">Photo Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a" 
+                     alt="Bordi Beach shoreline" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f" 
+                     alt="Chikoo orchard" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1596424755689-0331a09c6c87" 
+                     alt="Sunset at Bordi" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../palghar-tourism/palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="../destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="../palghar-tourism/palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+     <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+<div class="mt-2">
+        <a href="/palghar-tourism/palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+        <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
