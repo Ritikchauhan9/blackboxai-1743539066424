@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Brands - Palghar Tourism</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: background-color 0.3s;
+        }
+        
+        .header.scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: #ff6b6b;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 2rem;
+        }
+        
+        .nav-link {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-link:hover {
+            color: #ff6b6b;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ff6b6b;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #fff;
+            transition: all 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/800') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #ff6b6b;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid #ff6b6b;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #fff;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: #666;
+        }
+        
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            flex: 1 1 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-content {
+            flex: 1 1 400px;
+        }
+        
+        .about-heading {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .about-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ff6b6b;
+        }
+        
+        .about-text {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        /* Destination Section */
+        .bg-light {
+            background-color: #fff;
+        }
+        
+        .destinations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .destination-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .destination-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .destination-content {
+            padding: 1.5rem;
+        }
+        
+        .destination-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .destination-text {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            display: flex;
+            align-items: center;
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .read-more svg {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .read-more:hover svg {
+            transform: translateX(5px);
+        }
+        
+        /* Activities Section */
+        .activities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .activity-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .activity-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+        
+        .activity-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .activity-text {
+            color: #666;
+        }
+        
+        /* Testimonial Section */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 4rem;
+            color: #f0f0f0;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.3rem;
+        }
+        
+        .author-info small {
+            color: #666;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            flex: 1 1 300px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            margin-right: 1rem;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-details p {
+            color: #666;
+        }
+        
+        .contact-form {
+            flex: 1 1 500px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .submit-btn {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ff5252;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            flex: 1 1 300px;
+        }
+        
+        .footer-logo h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: #ff6b6b;
+        }
+        
+        .footer-links {
+            flex: 1 1 200px;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: #ff6b6b;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b6b;
+        }
+        
+        .footer-newsletter {
+            flex: 1 1 300px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .newsletter-btn {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        
+        .footer-bottom {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #ccc;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                height: calc(100vh - 70px);
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+                padding: 2rem 0;
+                backdrop-filter: blur(10px);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 2rem 0;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .nav-menu.active .nav-item {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0.2s;
+            }
+            
+            .nav-menu.active .nav-item:nth-child(2) { transition-delay: 0.3s; }
+            .nav-menu.active .nav-item:nth-child(3) { transition-delay: 0.4s; }
+            .nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.5s; }
+            .nav-menu.active .nav-item:nth-child(5) { transition-delay: 0.6s; }
+            .nav-menu.active .nav-item:nth-child(6) { transition-delay: 0.7s; }
+            
+            .hamburger {
+                display: block;
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .bar {
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        .footer-links h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ff6b6b;
+            transition: width 0.3s, left 0.3s;
+        }
+        .footer-links h3:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">Palghar<span>Tourism</span></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li class="nav-item"><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/00/65/e9/bordi-beach.jpg?w=1200&h=1200&s=1') no-repeat center center/cover;">
+            <div class="container">
+                <h1 class="hero-title">Popular Brands</h1>
+                <p class="hero-subtitle">Discover popular brands in Palghar.</p>
+                </div>
+                <a href="#brands" class="scroll-down">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const popup = document.getElementById('infoPopup');
+                        const arrowIcon = document.querySelector('.scroll-down');
+                        
+                        function isElementInViewport(el) {
+                            const rect = el.getBoundingClientRect();
+                            return (
+                                rect.top >= 0 &&
+                                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                            );
+                        }
+
+                        if (!localStorage.getItem('popupShown') && isElementInViewport(arrowIcon)) {
+                            popup.style.display = 'block';
+                            localStorage.setItem('popupShown', 'true');
+                            setTimeout(() => {
+                                popup.style.display = 'none';
+                            }, 4000);
+                        }
+
+                        window.addEventListener('scroll', function() {
+                            if (popup.style.display === 'block' && !isElementInViewport(arrowIcon)) {
+                                popup.style.display = 'none';
+                            }
+                        });
+                    });
+                </script>
+                <style>
+                    .scroll-down {
+                        position: absolute;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        color: #fff;
+                        font-size: 2rem;
+                        animation: bounce 2s;
+                        animation-iteration-count: infinite;
+                        animation-delay: 6s;
+                        cursor: pointer;
+                        width: 500px; /* Increased width for better clickability */
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    @keyframes bounce {
+                        0%, 20%, 50%, 80%, 100% {
+                            transform: translateY(0) translateX(-50%);
+                        }
+                        40% {
+                            transform: translateY(-30px) translateX(-50%);
+                        }
+                        60% {
+                            transform: translateY(-15px) translateX(-50%);
+                        }
+                    }
+                </style>
+                <script>
+                    document.querySelector('.scroll-down').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.querySelector('.brands-section').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+    <section class="brands-section section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Popular Brands in Palghar</h2>
+            <p class="section-subtitle" data-aos="fade-up">Discover our local favorites and national chains</p>
+            
+            <div class="brands-grid">
+                <!-- Food & Beverages -->
+                <div class="brand-category" data-aos="fade-up">
+                    <h3 class="category-title">Food & Beverages</h3>
+                    <div class="brand-cards">
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://soufflefoodworks.com/wp-content/uploads/2019/01/logo-1.png') center/cover no-repeat; filter: blur(0.4px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Souffle Logo"></div>
+                            <h4>Souffle Cake Shop</h4>
+                            <p>Cake Shop</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 08 AM - 11 PM</p>
+                                <a href="https://soufflefoodworks.com/menu" class="brand-btn" target="_blank" aria-label="Visit Souffle Website">Visit Site</a>
+
+                            </div>
+                        </div>
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipO8mcfOH4Abgr_WjuNdEw8RaZ4iyT_cFaahP2pZ=s680-w680-h510') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Dominos"></div>
+                            <h4>Domino's Pizza</h4>
+                            <p>Pizza Restaurant</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 11 AM - 11 PM</p>
+                                <a href="https://www.dominos.co.in/" class="brand-btn" target="_blank" aria-label="Visit Domino's website">Visit Site</a>
+                            </div>
+                        </div>
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipMnbN7tSaYwQlU9YLv_4JtsWqt15vDAVKY64WUf=s680-w680-h510') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Janta-Sweets"></div>
+                            <h4>Janta Sweets</h4>
+                            <p>Indian Sweets & Namkeen</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 11 AM - 11 PM</p>
+                                <a href="https://g.co/kgs/Wbm6f2V" class="brand-btn" target="_blank" aria-label="Visit Google Map website">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shopping -->
+                <div class="brand-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">Shopping</h3>
+                    <div class="brand-cards">
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipMA9iyWMpYixglgMQscB3auz9gyt9TaPAr2EhGv=s680-w680-h510') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Reliance Superstore"></div>
+                            <h4>Reliance Superstore</h4>
+                            <p>Supermarket</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 9 AM - 10 PM</p>
+                                <a href="https://www.jiomart.com/" class="brand-btn" target="_blank" aria-label="Visit Jio Mart website">Visit Site</a>
+                            </div>
+                        </div>
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://jobquestjourney.com/wp-content/uploads/2024/08/Zudio-job.jpg') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Zepto"></div>
+                            <h4>Zudio</h4>
+                            <p>Men & Women Clothing Store</p>
+                            <div class="brand-overlay">
+                                <p>Opening Soon</p>
+                                <a href="https://www.zudio.com/" class="brand-btn" target="_blank" aria-label="Visit Zudio website">Visit Site</a>
+                            </div>
+                        </div>
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipPx9nLboARK1Y-tpVXfXCHpibY5jFvrm11xpJIm=s680-w680-h510') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="B-Mart"></div>
+                            <h4>B Mart</h4>
+                            <p>Small Supermarket</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 9 AM - 10 PM</p>
+                                <a href="https://g.co/kgs/CivDH7Z" class="brand-btn" target="_blank" aria-label="Visit B-Mart website">Visit Site</a>
+                            </div>
+                        </div>
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://lh3.googleusercontent.com/p/AF1QipNbg-FJJCxiktu_Gv2u5AelRkTUs-7RFIkqjLrw=s680-w680-h510') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Croma"></div>
+                            <h4>Croma</h4>
+                            <p>Electronics</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 11 AM - 9 PM</p>
+                                <a href="https://maps.app.goo.gl/9JQV6MPhMQCr4pwJA" class="brand-btn" target="_blank" aria-label="Visit Croma Map website">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instant Delivery -->
+                <div class="brand-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">Instant Delivery</h3>
+                    <div class="brand-cards">
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAb0zCsPzg-rGGNn-6poaFGGFF9wiUaXWy1Q&s') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Zepto"></div>
+                            <h4>Zepto</h4>
+                            <p>Quick Commerce</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 9 AM - 10 PM</p>
+                                <a href="https://www.zeptonow.com/" class="brand-btn" target="_blank" aria-label="Visit D-Mart website">Visit Site</a>
+                            </div>
+                        </div>
+                        <div class="brand-card" tabindex="0">
+                            <div class="brand-logo" style="background: url('https://logowik.com/content/uploads/images/dominos-pizza5190.jpg') center/cover no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Dominos"></div>
+                            <h4>Domino's</h4>
+                            <p>Pizza Resturant</p>
+                            <div class="brand-overlay">
+                                <p>Open daily: 9 AM - 10 PM</p>
+                                <a href="https://www.dominos.co.in/" class="brand-btn" target="_blank" aria-label="Visit D-Mart website">Visit Site</a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="brand-category" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="category-title" style="text-align: center;">Support us</h3>
+                <div class="brand-cards">
+                    <div class="brand-card" tabindex="0">
+                        <div class="brand-logo" style="background: url('https://cdn-icons-png.flaticon.com/512/3176/3176298.png') center/contain no-repeat; filter: blur(0px); height: 100px; width: 100%; border-radius: 10px;" aria-label="Idea Innovation Icon"></div>
+                        <h4>Support Us</h4>
+                        <p>By Clicking Visit, Fill the form and tell Reputated Brands in Palghar</p>
+                        <div class="brand-overlay">
+                            <p>Support us</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEQe61iV6tuMG0PKpO3b17eEqJdumfpP7HgEUYuSJi1335Hg/viewform?usp=header" class="brand-btn" target="_blank" aria-label="Visit D-Mart website">Visit Site</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <style>
+            .brands-section {
+                background-color: #f8f9fa;
+                padding: 80px 0;
+            }
+
+            .brands-grid {
+                display: grid;
+                gap: 40px;
+                margin-top: 40px;
+            }
+
+            .brand-category {
+                background: white;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                transition: transform 0.3s ease;
+            }
+
+            .category-title {
+                color: #333;
+                margin-bottom: 25px;
+                font-size: 1.5rem;
+                border-bottom: 2px solid #ff6b6b;
+                padding-bottom: 10px;
+                display: inline-block;
+            }
+
+            .brand-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .brand-card {
+                background: white;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .brand-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            }
+
+            .brand-logo {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                margin-bottom: 15px;
+            }
+
+            .brand-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255,107,107,0.95);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                color: white;
+                padding: 20px;
+            }
+
+            @media (hover: hover) {
+                .brand-card:hover .brand-overlay {
+                    opacity: 1;
+                }
+            }
+
+            @media (hover: none) {
+                .brand-card:active .brand-overlay {
+                    opacity: 1;
+                }
+                .brand-overlay.active {
+                    opacity: 1;
+                }
+            }
+
+            .brand-btn {
+                margin-top: 15px;
+                padding: 8px 20px;
+                background: white;
+                color: #ff6b6b;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+            }
+
+            .brand-btn:hover {
+                background: #333;
+                color: white;
+            }
+
+            @media (max-width: 768px) {
+                .brands-grid {
+                    gap: 20px;
+                }
+                
+                .brand-category {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <h2>Explore<span style="color: #ff6b6b;">Palghar</span></h2>
+                <p style="line-height: 1.8; margin-bottom: 20px;">Your ultimate guide to discovering the hidden gems of Palghar.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3 style="font-size: 1.2rem; margin-bottom: 20px;">Quick Links</h3>
+                <ul style="padding-left: 0;">
+                    <li style="margin-bottom: 12px;"><a href="#home">Home</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#about">About</a></li>
+                    <li style="margin-bottom: 12px;"><a href="#activities">Activities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Palghar, Maharashtra, India</li>
+                    <li><i class="fas fa-envelope"></i> info@explorepalghar.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe for travel updates and special offers</p>
+                <form class="newsletter-form" id="newsletterForm" onsubmit="return handleSubscribe(event)">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" id="newsletterEmail">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Explore Palghar. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script> document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+    
+        if (!hamburger || !navMenu) {
+            console.error('Required navigation elements not found');
+            return;
+        }
+    
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    
+        // Close the menu when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+    
+    // Global function for handling newsletter subscription
+    function handleSubscribe(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('newsletterEmail');
+        const email = emailInput.value;
+        const subscribed = localStorage.getItem('subscribed');
+    
+        if (subscribed) {
+            alert('You have already subscribed to the newsletter.');
+            return false;
+        }
+    
+        // Simulate network request for subscription
+        fetch('https://getform.io/f/broyxnya', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+        .then(response => {
+            if (response.ok) {
+                localStorage.setItem('subscribed', 'true');
+                alert('Thank you for subscribing!');
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .catch(error => {
+            alert('Subscription failed. Please try again.');
+        });
+    
+        return false;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // User scrolled down, hide navbar gradually
+                    header.style.transform = 'translateY(-100%)';
+                    header.style.transition = 'transform 0.6s ease';
+                } else {
+                    // User scrolled up, show navbar gradually
+                    header.style.transform = 'translateY(0)';
+                    header.style.transition = 'transform 0.6s ease';
+                }
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+</body>
+</html>
