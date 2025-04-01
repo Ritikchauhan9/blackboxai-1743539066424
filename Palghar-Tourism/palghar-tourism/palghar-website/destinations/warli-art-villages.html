@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Experience the vibrant Warli tribal art and culture in Palghar's traditional villages. Discover authentic art, traditions, and rural life.">
+    <title>Warli Art Villages - Palghar Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-light">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">Palghar Tourism</a>
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html"
+                        class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html"
+                        class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html"
+                        class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html"
+                        class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-20">
+            <div class="h-[60vh] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1582547094485-13504c887fb7" alt="Warli Art Village scene"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center">
+                    <div class="text-white">
+                        <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Warli Art Villages</h1>
+                        <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                            Experience the living tradition of tribal art and culture
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Main Content -->
+                    <div class="md:col-span-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">About Warli Villages</h2>
+                            <p class="text-gray-600 mb-4">
+                                The Warli villages of Palghar are home to one of India's oldest tribal art forms. These
+                                villages preserve the authentic traditions, lifestyle, and artistic heritage of the
+                                Warli tribe, known for their distinctive geometric art style.
+                            </p>
+                            <p class="text-gray-600">
+                                Visitors can experience traditional village life, witness artists at work, and even
+                                participate in art workshops to learn the basics of Warli painting.
+                            </p>
+                        </div>
+
+                        <!-- Cultural Highlights -->
+                        <div class="space-y-4">
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Cultural Highlights</h2>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Traditional Art</h3>
+                                <p class="text-gray-600">Watch skilled artists create intricate Warli paintings using
+                                    traditional techniques and materials.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Village Life</h3>
+                                <p class="text-gray-600">Experience authentic tribal lifestyle, customs, and daily
+                                    activities.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Art Workshops</h3>
+                                <p class="text-gray-600">Learn the basics of Warli art through hands-on workshops with
+                                    local artists.</p>
+                            </div>
+                        </div>
+
+                        <!-- Activities -->
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Things to Do</h2>
+                            <ul class="space-y-4 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-palette text-primary mr-2"></i>
+                                    Participate in art workshops
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-camera text-primary mr-2"></i>
+                                    Photography tours
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shopping-bag text-primary mr-2"></i>
+                                    Buy authentic Warli artwork
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-utensils text-primary mr-2"></i>
+                                    Try traditional tribal cuisine
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Visitor Information</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><i class="fas fa-clock mr-2"></i>Best Time: October - March</li>
+                                <li><i class="fas fa-language mr-2"></i>Local Language: Warli</li>
+                                <li><i class="fas fa-users mr-2"></i>Group Tours Available</li>
+                                <li><i class="fas fa-camera mr-2"></i>Photography Permitted</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><strong>By Bus:</strong> Local buses from Palghar</li>
+                                <li><strong>By Car:</strong> 2-hour drive from Mumbai</li>
+                                <li><strong>Guide:</strong> Local guides available</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Workshop Details</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li>Duration: 2-3 hours</li>
+                                <li>Materials provided</li>
+                                <li>Booking required</li>
+                                <li>Available in English</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
