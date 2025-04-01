@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Arnala Fort, a historical site in Maharashtra, known for its rich heritage and scenic views.">
+    <meta name="keywords" content="Arnala Fort, Maharashtra tourism, historical sites, weekend getaway, Palghar">
+    <title>Arnala Fort - A Historical Gem | Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/palghar-tourism/palghar-website/destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="/palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="/palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="/palghar-tourism/palghar-website/destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="/palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Arnala_Fort.JPG" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Arnala_Fort.JPG" 
+                     alt="Arnala Fort" 
+                     class="w-full h-full object-cover">
+            </a>
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset- 0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Arnala Fort</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Discover the historical significance and scenic beauty of this ancient fort
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="py-8 bg-white shadow-md relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Best Time -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-clock text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Best Time to Visit</h3>
+                        <p class="text-gray-600">October to March</p>
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-hourglass-half text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Ideal Duration</h3>
+                        <p class="text-gray-600">1 Day</p>
+                    </div>
+                </div>
+
+                <!-- Distance -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-route text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Distance from Mumbai</h3>
+                        <p class="text-gray-600">100 km</p>
+                    </div>
+                </div>
+
+                <!-- Activities -->
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-hiking text-3xl text-primary"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-700">Activities</h3>
+                        <p class="text-gray-600">Trekking, Photography, Sightseeing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-6">About Arnala Fort</h2>
+                    <p class="text-gray-600 mb-4">
+                        Arnala Fort, built in the 16th century, is a significant historical site located on Arnala Island in Maharashtra. The fort is known for its strategic location and impressive architecture, making it a popular destination for history enthusiasts and tourists alike.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        The fort offers stunning views of the Arabian Sea and is surrounded by beautiful landscapes. Visitors can explore the fort's walls, bastions, and the scenic surroundings, making it a perfect spot for a day trip.
+                    </p>
+                    <p class="text-gray-600">
+                        The fort is less crowded compared to other tourist spots, providing a peaceful atmosphere for exploration and relaxation.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <p>
+                        Image: <a href="https://commons.wikimedia.org/wiki/File:Arnala-fort-south-watch-tower.jpg" target="_blank">
+                        Arnala Fort South Watch Tower</a> by <a href="https://commons.wikimedia.org/wiki/User:Damitr" target="_blank">Damitr</a>, 
+                        licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a>.
+                    </p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Arnala-fort-south-watch-tower.jpg" 
+                         alt="Arnala Fort South Watch Tower" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Image Gallery</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <li>
+                    <img src="https://upload.wikimedia.org /wikipedia/commons/1/1c/Arnala-fort-south-watch-tower.jpg" alt="Arnala Fort South Watch Tower" width="600">
+                    <p>1. Arnala Fort South Watch Tower</p>
+                    <p style="display:none;">Image Credit: Wikimedia Commons</p>
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Arnala-fort-entrance.jpg" alt="Arnala Fort Entrance" width="600">
+                    <p>2. Arnala Fort Entrance</p>
+                    <p style="display:none;">Image Credit: Wikimedia Commons</p>
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Arnala-fort-entrance-detail.jpg" alt="Arnala Fort Entrance Detail" width="600">
+                    <p>3. Arnala Fort Entrance Detail</p>
+                    <p style="display:none;">Image Credit: Wikimedia Commons</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How to Reach -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">How to Reach</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- By Train -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-train text-3xl text-primary mr-4"></i>
+                        <h3 class="text-xl font-bold text-primary">By Train</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        The nearest railway station is Virar, which is well-connected to Mumbai. Local trains run frequently.
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        Distance from station to fort: 10 km
+                    </p>
+                </div>
+
+                <!-- By Road -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-3xl text-primary mr-4"></i>
+                        <h3 class="text-xl font-bold text-primary">By Road</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Take NH48 from Mumbai towards Gujarat. The drive takes about 2 hours. Buses and taxis are also available.
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        Distance from Mumbai: 100 km
+                    </p>
+                </div>
+
+                <!-- Local Transport -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-auto-rickshaw text-3xl text-primary mr-4"></i>
+                        <h3 class="text-xl font-bold text-primary">Local Transport</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Auto-rickshaws and taxis are available from Virar station to the fort. Renting a bike is also an option for local exploration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Best Time to Visit</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Winter -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Winter (Oct-Feb)</h3>
+                    <p class="text-gray-600">
+                        Ideal season for visiting. The weather is pleasant, making it perfect for exploration and outdoor activities.
+                    </p>
+                </div>
+
+                <!-- Summer -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Summer (Mar-May)</h3>
+                    <p class="text-gray-600">
+                        Hot temperatures can reach up to 35°C. Early morning or late afternoon visits are recommended to avoid the heat.
+                    </p>
+                </div>
+
+                <!-- Monsoon -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Monsoon (Jun -Sep)</h3>
+                    <p class="text-gray-600">
+                        Heavy rains can limit outdoor activities. However, the lush greenery during this season is a sight to behold.
+                    </p>
+                </div>
+
+                <!-- Peak Season -->
+                <div class="bg-light rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Peak Season</h3>
+                    <p class="text-gray-600">
+                        December to February sees a surge in visitors. It's advisable to book accommodations in advance during this time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & Guidelines -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Tips & Guidelines</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Do's</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Wear comfortable shoes for trekking</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Carry water and snacks</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Respect the historical site</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Take plenty of photos</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Engage with local guides for insights</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Don'ts</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Don't litter around the fort</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Avoid climbing on unstable structures</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Don't disturb wildlife</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Don't visit during heavy rains</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Avoid loud noises that may disturb the peace</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Nearby Attractions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Beach -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Arnala-fort-south-watch-tower.jpg" 
+                         alt="Nearby Beach" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Nearby Beach</h3>
+                        <p class="text-gray-600 mb-4">
+                            A serene beach perfect for relaxation and water activities. Distance: 5 km
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Local Temples -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Arnala-fort-entrance.jpg" 
+                         alt="Local Temples" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Local Temples</h3>
+                        <p class="text-gray-600 mb-4">
+                            Visit ancient temples nearby that showcase beautiful architecture. Distance: 3 km
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Nature Trails -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/ Arnala-fort-entrance-detail.jpg" 
+                         alt="Nature Trails" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Nature Trails</h3>
+                        <p class="text-gray-600 mb-4">
+                            Explore scenic trails that offer a glimpse of local flora and fauna. Distance: 2 km
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/palghar-tourism/palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="/terms-and-conditions" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+                    <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
