@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Credits | Palghar Tourism</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -13,8 +16,21 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --color-primary: #1B4965;
+            --color-secondary: #62B6CB;
+            --color-accent: #5FA777;
+            --color-sand: #CAA67A;
+            --color-light: #F0F7F4;
+        }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-light { background-color: var(--color-light); }
+    </style>
 </head>
-<body class="font-sans bg-gray-100">
+<body class="font-sans bg-light">
     <!-- Header/Navigation -->
     <header class="fixed w-full bg-white shadow-md z-50">
         <nav class="container mx-auto px-4 py-4">
@@ -38,87 +54,122 @@
                     <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
                 </div>
             </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="pt-20 pb-12">
+    <main class="pt-24 pb-12">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow">
-                <h1 class="text-3xl font-bold mb-8 text-primary">Image Credits</h1>
-                
-                <div class="space-y-8">
-                    <section>
-                        <h2 class="text-2xl font-semibold mb-4 text-primary">Destination Images</h2>
-                        <ul class="space-y-4">
-                            <li>
-                                <h3 class="font-semibold">Dahanu Beach</h3>
-                                <p class="text-gray-600">Photo by Pankaj Naringrekar</p>
-                                <p class="text-sm text-gray-500">Source: assets/images/pexels-pankaj-naringrekar-2079418269-29283305.jpg</p>
-                            </li>
-                            <li>
-                                <h3 class="font-semibold">Kelva Beach</h3>
-                                <p class="text-gray-600">Photo by Maharashtra Tourism Board</p>
-                                <p class="text-sm text-gray-500">Used with permission</p>
-                            </li>
-                            <li>
-                                <h3 class="font-semibold">Shirgaon Fort</h3>
-                                <p class="text-gray-600">Photo by Archaeological Survey of India</p>
-                                <p class="text-sm text-gray-500">Public Domain</p>
-                            </li>
-                        </ul>
-                    </section>
+            <h1 class="text-4xl font-display font-bold text-primary text-center mb-12">Image Credits</h1>
 
-                    <section>
-                        <h2 class="text-2xl font-semibold mb-4 text-primary">Cultural Images</h2>
-                        <ul class="space-y-4">
-                            <li>
-                                <h3 class="font-semibold">Warli Art</h3>
-                                <p class="text-gray-600">Photo by Tribal Research Institute, Maharashtra</p>
-                                <p class="text-sm text-gray-500">Used with permission</p>
-                            </li>
-                            <li>
-                                <h3 class="font-semibold">Local Festivals</h3>
-                                <p class="text-gray-600">Photo by Cultural Department, Maharashtra</p>
-                                <p class="text-sm text-gray-500">Used with permission</p>
-                            </li>
-                        </ul>
-                    </section>
+            <!-- Destinations Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-display font-bold text-primary mb-6">Destination Images</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Dahanu Beach -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="assets/images/destinations/dahanu-beach.jpg" 
+                             alt="Dahanu Beach" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Dahanu Beach</h3>
+                            <p class="text-gray-600">Photo by: Pankaj Naringrekar</p>
+                            <p class="text-sm text-gray-500">Source: Personal Collection</p>
+                            <p class="text-sm text-gray-500">License: Used with permission</p>
+                        </div>
+                    </div>
 
-                    <section>
-                        <h2 class="text-2xl font-semibold mb-4 text-primary">Activity Images</h2>
-                        <ul class="space-y-4">
-                            <li>
-                                <h3 class="font-semibold">Water Sports</h3>
-                                <p class="text-gray-600">Photo by Maharashtra Maritime Board</p>
-                                <p class="text-sm text-gray-500">Used with permission</p>
-                            </li>
-                            <li>
-                                <h3 class="font-semibold">Trekking</h3>
-                                <p class="text-gray-600">Photo by Palghar Forest Department</p>
-                                <p class="text-sm text-gray-500">Used with permission</p>
-                            </li>
-                        </ul>
-                    </section>
+                    <!-- Kelva Beach -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="assets/images/destinations/kelva-beach.jpg" 
+                             alt="Kelva Beach" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Kelva Beach</h3>
+                            <p class="text-gray-600">Photo by: Maharashtra Tourism</p>
+                            <p class="text-sm text-gray-500">Source: Official Website</p>
+                            <p class="text-sm text-gray-500">License: Used with permission</p>
+                        </div>
+                    </div>
 
-                    <div class="mt-8 p-4 bg-gray-50 rounded-lg">
-                        <h2 class="text-xl font-semibold mb-2 text-primary">Usage Rights</h2>
-                        <p class="text-gray-600">
-                            All images are used with permission from their respective copyright holders or are in the public domain. 
-                            For any copyright concerns or to request image removal, please contact us at palghartourisms@gmail.com
-                        </p>
+                    <!-- Arnala Fort -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="assets/images/destinations/arnala-fort.jpg" 
+                             alt="Arnala Fort" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Arnala Fort</h3>
+                            <p class="text-gray-600">Photo by: Archaeological Survey of India</p>
+                            <p class="text-sm text-gray-500">Source: ASI Archives</p>
+                            <p class="text-sm text-gray-500">License: Public Domain</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Cultural Images Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-display font-bold text-primary mb-6">Cultural Images</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Warli Art Village -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="assets/images/destinations/warli-village.jpg" 
+                             alt="Warli Art Village" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Warli Art Village</h3>
+                            <p class="text-gray-600">Photo by: Tribal Research Institute</p>
+                            <p class="text-sm text-gray-500">Source: TRI Maharashtra</p>
+                            <p class="text-sm text-gray-500">License: Used with permission</p>
+                        </div>
+                    </div>
+
+                    <!-- Jawhar Palace -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="assets/images/destinations/jawhar-palace.jpg" 
+                             alt="Jawhar Palace" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Jawhar Palace</h3>
+                            <p class="text-gray-600">Photo by: District Collectorate, Palghar</p>
+                            <p class="text-sm text-gray-500">Source: Official District Website</p>
+                            <p class="text-sm text-gray-500">License: Government Open Source</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Guidelines -->
+            <section class="bg-white rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-display font-bold text-primary mb-4">Usage Guidelines</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>All images must be used with proper attribution to their respective owners</li>
+                    <li>Commercial use requires explicit permission from the copyright holders</li>
+                    <li>Images may not be modified or altered without permission</li>
+                    <li>For any copyright concerns, please contact us at palghartourisms@gmail.com</li>
+                </ul>
+            </section>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
             <div class="mt-2">
-                <a href="terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+                <a href="terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> |
                 <a href="privacy-policy.html" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
             </div>
         </div>
