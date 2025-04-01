@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Kelva Beach in Palghar - a serene coastal paradise known for its pristine shores, historic fort, and peaceful ambiance.">
+    <title>Kelva Beach - Palghar Tourism</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                 alt="Kelva Beach sunset view" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+                <div class="text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Kelva Beach</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        A pristine coastal paradise with historic charm
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="md:col-span-2 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">About Kelva Beach</h2>
+                        <p class="text-gray-600 mb-4">
+                            Kelva Beach is one of Palghar's most beautiful coastal destinations, known for its pristine shoreline, historic fort, and peaceful atmosphere. The beach stretches for several kilometers, offering visitors a perfect escape from urban life.
+                        </p>
+                        <p class="text-gray-600">
+                            The beach is famous for its golden sands, clear waters, and the historic Kelva Fort that adds a cultural dimension to this natural paradise. The area is also known for its fishing community and local seafood delicacies.
+                        </p>
+                    </div>
+
+                    <!-- Attractions -->
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">Key Attractions</h2>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Kelva Fort</h3>
+                                <p class="text-gray-600">
+                                    A 16th-century Portuguese fort offering panoramic views of the Arabian Sea and surrounding landscape. The fort's architecture and historical significance make it a must-visit attraction.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Sunset Point</h3>
+                                <p class="text-gray-600">
+                                    Experience breathtaking sunsets from the beach's western end, where the sun paints the sky in vibrant colors as it dips into the Arabian Sea.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Local Markets</h3>
+                                <p class="text-gray-600">
+                                    Explore the nearby fish market and local shops selling fresh seafood, traditional snacks, and handcrafted items.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activities -->
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-primary mb-4">Things to Do</h2>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-umbrella-beach text-primary mr-2"></i>
+                                Beach activities like swimming and sunbathing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-hiking text-primary mr-2"></i>
+                                Explore Kelva Fort and its surroundings
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-camera text-primary mr-2"></i>
+                                Photography at sunset point
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-fish text-primary mr-2"></i>
+                                Try local seafood delicacies
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-shopping-bag text-primary mr-2"></i>
+                                Shop at local markets
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <!-- Quick Info -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">Quick Information</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-2"></i>
+                                <span>Best Time: October to March</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                                <span>Location: 15km from Palghar</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-road text-primary mr-2"></i>
+                                <span>Access: Road, Railway</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-language text-primary mr-2"></i>
+                                <span>Languages: Marathi, Hindi</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- How to Reach -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                        <div class="space-y-3 text-gray-600">
+                            <div>
+                                <h4 class="font-bold">By Train:</h4>
+                                <p>Nearest station: Kelva Road (2km)</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">By Road:</h4>
+                                <p>Regular buses from Palghar and Mumbai</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">By Car:</h4>
+                                <p>2-hour drive from Mumbai via NH48</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-4">Weather</h3>
+                        <div class="space-y-3 text-gray-600">
+                            <p>Summer: 25°C - 35°C</p>
+                            <p>Winter: 15°C - 28°C</p>
+                            <p>Monsoon: June - September</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-primary text-center mb-8">Photo Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                     alt="Kelva Beach sunset" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" 
+                     alt="Kelva Fort" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1596424755689-0331a09c6c87" 
+                     alt="Local fishing boats" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../palghar-tourism/palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="../destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="../palghar-tourism/palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="../contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+     <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+<div class="mt-2">
+        <a href="/palghar-tourism/palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+        <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
