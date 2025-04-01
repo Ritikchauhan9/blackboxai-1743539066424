@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Tungareshwar Wildlife Sanctuary in Palghar - home to diverse flora and fauna, trekking trails, and the sacred Tungareshwar Temple.">
+    <title>Tungareshwar Wildlife Sanctuary - Palghar Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">Palghar Tourism</a>
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-20">
+            <div class="h-[60vh] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" 
+                     alt="Tungareshwar Wildlife Sanctuary" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center">
+                    <div class="text-white">
+                        <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Tungareshwar Wildlife Sanctuary</h1>
+                        <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                            A haven for wildlife and nature enthusiasts
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Main Content -->
+                    <div class="md:col-span-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">About the Sanctuary</h2>
+                            <p class="text-gray-600 mb-4">
+                                Tungareshwar Wildlife Sanctuary is a protected area spanning across 85.70 square kilometers in the Western Ghats. The sanctuary is known for its rich biodiversity, including diverse flora and fauna, and the sacred Tungareshwar Temple.
+                            </p>
+                            <p class="text-gray-600">
+                                The sanctuary offers excellent opportunities for wildlife spotting, bird watching, nature photography, and trekking. Its varied landscape includes dense forests, streams, and hills, making it a perfect destination for nature lovers.
+                            </p>
+                        </div>
+
+                        <!-- Wildlife -->
+                        <div class="space-y-4">
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Wildlife & Nature</h2>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Flora</h3>
+                                <p class="text-gray-600">Dense forests with various tree species, medicinal plants, and rare orchids.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Fauna</h3>
+                                <p class="text-gray-600">Home to leopards, wild boars, various species of deer, and numerous bird species.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Bird Life</h3>
+                                <p class="text-gray-600">Paradise for bird watchers with over 200 species of birds.</p>
+                            </div>
+                        </div>
+
+                        <!-- Activities -->
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Things to Do</h2>
+                            <ul class="space-y-4 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-hiking text-primary mr-2"></i>
+                                    Trekking and nature walks
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-binoculars text-primary mr-2"></i>
+                                    Bird watching
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-camera text-primary mr-2"></i>
+                                    Wildlife photography
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-pray text-primary mr-2"></i>
+                                    Visit Tungareshwar Temple
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Visitor Information</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><i class="fas fa-clock mr-2"></i>Timings: 6 AM - 6 PM</li>
+                                <li><i class="fas fa-calendar mr-2"></i>Best Time: October - March</li>
+                                <li><i class="fas fa-ticket-alt mr-2"></i>Entry Fee: Nominal</li>
+                                <li><i class="fas fa-camera-retro mr-2"></i>Camera Fee: Applicable</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><strong>By Train:</strong> Nearest station - Vasai Road</li>
+                                <li><strong>By Road:</strong> Well-connected to Mumbai</li>
+                                <li><strong>Distance:</strong> 45 km from Mumbai</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Essential Tips</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li>Wear comfortable hiking shoes</li>
+                                <li>Carry water and snacks</li>
+                                <li>Take guide for treks</li>
+                                <li>Follow sanctuary rules</li>
+                                <li>Avoid monsoon visits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
