@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover exciting activities in Palghar - from water sports and beach activities to trekking, fort exploration, and cultural experiences.">
+    <meta name="keywords" content="Palghar activities, water sports, trekking, fort exploration, cultural experiences, Maharashtra tourism">
+    <title>Activities & Experiences in Palghar | Palghar Tourism</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-primary font-semibold">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-primary font-semibold">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[60vh] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b"
+                alt="Adventure activities in Palghar" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Activities & Experiences</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Discover exciting adventures and memorable experiences in Palghar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beach Activities -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Beach Activities</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Swimming & Water Sports -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256" alt="Swimming and water sports"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Swimming & Water Sports</h3>
+                        <p class="text-gray-600 mb-4">
+                            Enjoy swimming in clear waters and try various water sports activities at Dahanu and Kelva beaches.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Jet skiing</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Banana boat rides</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Swimming</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Beach Games -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1533713692156-f70938dc0d54" alt="Beach games"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Beach Games</h3>
+                        <p class="text-gray-600 mb-4">
+                            Engage in fun beach activities with friends and family.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Beach volleyball</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Frisbee</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Sand castle building</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sunset Activities -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1514923995763-768e52f5af87" alt="Sunset activities"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Sunset Activities</h3>
+                        <p class="text-gray-600 mb-4">
+                            Experience magical evenings at Palghar's beaches.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Photography</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Beach walking</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Bonfire (with permission)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Activities -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Adventure Activities</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Trekking -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306" alt="Trekking in Palghar"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Trekking</h3>
+                        <p class="text-gray-600 mb-4">
+                            Explore scenic trails in Jawhar and Tungareshwar Wildlife Sanctuary.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Guided treks available</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Various difficulty levels</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Beautiful viewpoints</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fort Exploration -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" alt="Fort exploration"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Fort Exploration</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover historical forts and their stories.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Heritage walks</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Photography tours</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Historical insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Wildlife Spotting -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56" alt="Wildlife spotting"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Wildlife Spotting</h3>
+                        <p class="text-gray-600 mb-4">
+                            Observe local wildlife in their natural habitat.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Bird watching</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Nature trails</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Guided tours</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Experiences -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-4xl font-bold text-primary text-center mb-12">Cultural Experiences</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Warli Art -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1582547094786-63d3088c2f33" alt="Warli art experience"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Warli Art Experience</h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn about traditional Warli art and try your hand at creating it.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Art workshops</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Village visits</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Cultural performances</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Local Cuisine -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84" alt="Local cuisine"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Food Experiences</h3>
+                        <p class="text-gray-600 mb-4">
+                            Savor local delicacies and learn about traditional cuisine.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Cooking classes</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Food tours</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Seafood specialties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Festival Celebrations -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1592306243116-0ff662878b9d" alt="Festival celebrations"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Festival Celebrations</h3>
+                        <p class="text-gray-600 mb-4">
+                            Experience local festivals and traditions.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-accent mr-2"></i>Ganesh Chaturthi</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Tribal festivals</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i>Cultural events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity Booking -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-display text-4xl font-bold mb-8">Ready for an Adventure?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Book your activities in advance to ensure availability and get the best experience.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-white text-primary hover:bg-secondary hover:text-white px-8 py-4 rounded-lg font-semibold transition duration-300">
+                Book Activities
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+                <div class="mt-2">
+                    <a href="terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> |
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
