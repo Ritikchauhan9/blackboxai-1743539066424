@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover Palghar - Maharashtra's Hidden Gem. Explore beautiful beaches, historic forts, and rich cultural heritage in this coastal paradise.">
+    <meta name="keywords"
+        content="Palghar tourism, Maharashtra tourism, Dahanu beach, Kelva beach, Shirgaon fort, Jawhar hill station">
+    <title>Explore Palghar – Maharashtra's Hidden Gem | Official Tourism Website</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',     // Deep Blue
+                        secondary: '#62B6CB',   // Light Blue
+                        accent: '#5FA777',      // Nature Green
+                        sand: '#CAA67A',        // Sand Color
+                        light: '#F0F7F4'        // Light Background
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f"
+                alt="Scenic view of Palghar coastline" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+        </div>
+
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="text-white max-w-2xl">
+                <h1 class="font-display text-5xl md:text-6xl font-bold mb-6">
+                    Explore Palghar
+                    <span class="block text-3xl md:text-4xl mt-2">Maharashtra's Hidden Gem</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8">
+                    Discover pristine beaches, ancient forts, and rich cultural heritage in this coastal paradise.
+                    Experience the perfect blend of history, nature, and adventure.
+                </p>
+<a href="travel-guide.html"
+                    class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-8 py-4 rounded-lg transition duration-300">
+                    Plan Your Visit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-display font-bold text-primary text-center mb-12">
+                Popular Destinations
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dahanu Beach -->
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Dahanu Beach"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-display text-2xl font-bold text-primary mb-2">Dahanu Beach</h3>
+                        <p class="text-gray-600 mb-4">
+                            Experience the serene beauty of this pristine beach known for its Chikoo orchards and
+                            peaceful ambiance.
+                        </p>
+                        <a href="/palghar-tourism/palghar-website/destinations/dahanu-beach.html"
+                            class="text-secondary hover:text-primary font-semibold">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jawhar Hill Station -->
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5" alt="Jawhar Hill Station"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-display text-2xl font-bold text-primary mb-2">Jawhar Hill Station</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover the cool climate and stunning views of this hidden hill station, home to tribal
+                            culture and waterfalls.
+                        </p>
+                        <a href="/palghar-tourism/palghar-website/destinations/jawhar-hill-station.html"
+                            class="text-secondary hover:text-primary font-semibold">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Shirgaon Fort -->
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98" alt="Shirgaon Fort"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-display text-2xl font-bold text-primary mb-2">Shirgaon Fort</h3>
+                        <p class="text-gray-600 mb-4">
+                            Step back in time at this historic coastal fort, offering panoramic views of the Arabian
+                            Sea.
+                        </p>
+                        <a href="/palghar-tourism/palghar-website/destinations/shirgaon-fort.html"
+                            class="text-secondary hover:text-primary font-semibold">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-display font-bold text-center mb-12">
+                Unforgettable Experiences
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Beach Activities -->
+                <div class="text-center">
+                    <i class="fas fa-umbrella-beach text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Beach Activities</h3>
+                    <p>Enjoy water sports, sunbathing, and peaceful walks along pristine beaches.</p>
+                </div>
+
+                <!-- Cultural Heritage -->
+                <div class="text-center">
+                    <i class="fas fa-landmark text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Cultural Heritage</h3>
+                    <p>Immerse yourself in local traditions, art, and festivals.</p>
+                </div>
+
+                <!-- Adventure -->
+                <div class="text-center">
+                    <i class="fas fa-hiking text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Adventure</h3>
+                    <p>Trek through hills, explore forts, and discover hidden trails.</p>
+                </div>
+
+                <!-- Local Cuisine -->
+                <div class="text-center">
+                    <i class="fas fa-utensils text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Local Cuisine</h3>
+                    <p>Savor authentic Maharashtrian dishes and seafood delicacies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-display font-bold text-primary mb-4">
+                Stay Updated
+            </h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter for the latest updates on events, travel tips, and special offers.
+            </p>
+            <form class="max-w-md mx-auto">
+                <div class="flex gap-4">
+                    <input type="email" placeholder="Enter your email"
+                        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary">
+                    <button type="submit"
+                        class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/palghar-tourism/palghar-website/palghar-tourism/palghar-website/about.html"
+                                class="hover:text-white">About</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/destinations/index.html"
+                                class="hover:text-white">Destinations</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/palghar-tourism/palghar-website/activities.html"
+                                class="hover:text-white">Activities</a></li>
+                        <li><a href="/palghar-tourism/palghar-website/contact.html"
+                                class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+                <div class="mt-2">
+                    <a href="/palghar-tourism/palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> |
+                    <a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
