@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Icon Credits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .image-credit {
+            margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .image-credit img {
+            max-width: 100%;
+            height: auto;
+        }
+        .background-image {
+            height: 100px;
+            background-size: cover;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image and Icon Credits</h1>
+    <div id="credits"></div>
+
+    <script>
+        // Function to extract image sources and create credits
+        function extractImageCredits() {
+            const creditsContainer = document.getElementById('credits');
+            const images = document.querySelectorAll('img');
+            const links = document.querySelectorAll('a');
+
+            // Extract images from <img> tags
+            images.forEach(img => {
+                const src = img.src;
+                const alt = img.alt || 'Image without description';
+                const credit = img.getAttribute('data-credit') || 'Unknown Author'; // Assuming you have a data-credit attribute for authors
+
+                const creditDiv = document.createElement('div');
+                creditDiv.className = 'image-credit';
+                creditDiv.innerHTML = `
+                    <img src="${src}" alt="${alt}">
+                    <p><strong>Credit:</strong> ${credit}</p>
+                `;
+                creditsContainer.appendChild(creditDiv);
+            });
+
+            // Extract images from <a> tags with background images
+            links.forEach(link => {
+                const style = window.getComputedStyle(link);
+                const backgroundImage = style.backgroundImage;
+
+                if (backgroundImage && backgroundImage !== 'none') {
+                    const urlMatch = backgroundImage.match(/url\(["']?([^"']+)["']?\)/);
+                    if (urlMatch) {
+                        const src = urlMatch[1];
+                        const credit = link.getAttribute('data-credit') || 'Unknown Author'; // Assuming you have a data-credit attribute for authors
+
+                        const creditDiv = document.createElement('div');
+                        creditDiv.className = 'image-credit';
+                        creditDiv.innerHTML = `
+                            <div class="background-image" style="background-image: url('${src}');"></div>
+                            <p><strong>Credit:</strong> ${credit}</p>
+                        `;
+                        creditsContainer.appendChild(creditDiv);
+                    }
+                }
+            });
+
+            // Check if any images were found
+            if (creditsContainer.children.length === 0) {
+                creditsContainer.innerHTML = '<p>No images or icons found on this page.</p>';
+            }
+        }
+
+        // Run the function on page load
+        window.onload = extractImageCredits;
+    </script>
+
+</body>
+</html>
