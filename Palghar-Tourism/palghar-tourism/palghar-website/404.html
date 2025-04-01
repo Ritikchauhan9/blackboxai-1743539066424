@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Palghar Tourism</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-light min-h-screen flex flex-col">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 404 Content -->
+    <main class="flex-grow flex items-center justify-center py-16 px-4">
+        <div class="text-center">
+            <div class="text-9xl font-bold text-primary mb-8">404</div>
+            <h1 class="text-4xl font-display font-bold text-gray-800 mb-4">Page Not Found</h1>
+            <p class="text-xl text-gray-600 mb-8">
+                Oops! The page you're looking for seems to have wandered off exploring Palghar.
+            </p>
+            <div class="space-y-4">
+                <p class="text-gray-600">
+                    Don't worry, you can:
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="index.html"
+                        class="inline-block bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
+                        <i class="fas fa-home mr-2"></i>Return Home
+                    </a>
+                    <a href="destinations/index.html"
+                        class="inline-block bg-accent hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
+                        <i class="fas fa-map-marked-alt mr-2"></i>Explore Destinations
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
