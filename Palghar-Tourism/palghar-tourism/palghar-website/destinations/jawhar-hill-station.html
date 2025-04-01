@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit Jawhar Hill Station in Palghar - a serene hill station known for its tribal culture, waterfalls, and pleasant climate.">
+    <title>Jawhar Hill Station - Palghar Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-display font-bold text-primary">Palghar Tourism</a>
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <div class="hidden md:flex space-x-6">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="../palghar-tourism/palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="../destinations/index.html" class="text-primary font-semibold">Destinations</a>
+                    <a href="../palghar-tourism/palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="../travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="/palghar-tourism/palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="/palghar-tourism/palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-20">
+            <div class="h-[60vh] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5" 
+                     alt="Jawhar Hill Station panoramic view" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center">
+                    <div class="text-white">
+                        <h1 class="font-display text-5xl md:text-6xl font-bold mb-4">Jawhar Hill Station</h1>
+                        <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                            A serene retreat in the Sahyadri mountains
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Main Content -->
+                    <div class="md:col-span-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">About Jawhar</h2>
+                            <p class="text-gray-600 mb-4">
+                                Jawhar, often called the 'Mahabaleshwar of Palghar', is a picturesque hill station known for its pleasant climate, tribal culture, and natural beauty. Located in the Sahyadri ranges, it offers a perfect escape from urban life.
+                            </p>
+                        </div>
+
+                        <!-- Attractions -->
+                        <div class="space-y-4">
+                            <h2 class="text-3xl font-display font-bold text-primary mb-4">Key Attractions</h2>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Jai Vilas Palace</h3>
+                                <p class="text-gray-600">Historic palace showcasing royal architecture and tribal artifacts.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Dabdaba Falls</h3>
+                                <p class="text-gray-600">Magnificent waterfall offering stunning views and trekking opportunities.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-bold text-primary mb-2">Tribal Museum</h3>
+                                <p class="text-gray-600">Showcases rich cultural heritage of local Warli tribes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">Quick Information</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><i class="fas fa-mountain mr-2"></i>Elevation: 1,500 ft</li>
+                                <li><i class="fas fa-thermometer-half mr-2"></i>Climate: 15°C - 32°C</li>
+                                <li><i class="fas fa-clock mr-2"></i>Best Time: October - March</li>
+                                <li><i class="fas fa-map-marker-alt mr-2"></i>Distance: 80km from Mumbai</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-primary mb-4">How to Reach</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li><strong>By Bus:</strong> Regular ST buses from Mumbai</li>
+                                <li><strong>By Train:</strong> Nearest station - Dahanu Road</li>
+                                <li><strong>By Car:</strong> 3-hour drive from Mumbai</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
