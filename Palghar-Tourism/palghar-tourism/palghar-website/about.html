@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about Palghar's rich history, geography, culture, and traditions. Discover what makes this Maharashtra district unique.">
+    <meta name="keywords" content="Palghar history, Palghar culture, Maharashtra tourism, Warli art, tribal culture">
+    <title>About Palghar - History, Culture & Heritage | Palghar Tourism</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4965',
+                        secondary: '#62B6CB',
+                        accent: '#5FA777',
+                        sand: '#CAA67A',
+                        light: '#F0F7F4'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="about.html" class="text-primary font-semibold">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="about.html" class="text-primary font-semibold">About</a>
+                    <a href="destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-12 bg-primary">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="font-display text-5xl font-bold mb-4">About Palghar</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Discover the rich history, vibrant culture, and natural beauty of Maharashtra's coastal paradise
+            </p>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-6">Rich History & Heritage</h2>
+                    <p class="text-gray-600 mb-4">
+                        Palghar, a district carved out of Thane in 2014, has a rich historical legacy dating back to
+                        ancient times. The region has been witness to various dynasties and rulers, including the
+                        Satavahanas, Western Chalukyas, and Marathas.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        The district's strategic coastal location made it an important part of maritime trade routes,
+                        leading to the construction of numerous forts along its coastline. These forts, built by the
+                        Marathas and Portuguese, stand testament to the region's historical significance.
+                    </p>
+                    <p class="text-gray-600">
+                        The name 'Palghar' itself has historical significance, derived from the words 'Pal' meaning
+                        protection and 'Ghar' meaning home, referring to its role as a protective shelter for seafarers
+                        and traders.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1599831013079-1a8bac7e5f98"
+                        alt="Historic fort in Palghar" class="rounded-lg shadow-xl">
+                    <div class="absolute -bottom-4 -right-4 bg-accent text-white p-4 rounded-lg">
+                        <p class="font-semibold">Founded in 2014</p>
+                        <p class="text-sm">as an independent district</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geography & Climate -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Geography & Climate</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Geographical Features -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-mountain text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Geographical Features</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Coastal plains along Arabian Sea</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Western Ghats mountain ranges</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Dense forests and valleys</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Multiple river systems</li>
+                    </ul>
+                </div>
+
+                <!-- Climate -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-cloud-sun text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Climate</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Tropical climate</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Moderate temperatures</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Heavy monsoon rainfall</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Pleasant winters</li>
+                    </ul>
+                </div>
+
+                <!-- Best Time to Visit -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-calendar-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary mb-4">Best Time to Visit</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-accent mr-2"></i>October to March</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Pleasant weather</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Perfect for outdoor activities</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Festival season</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture & Traditions -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Culture & Traditions</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Warli Art -->
+                <div class="relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1582547094786-63d3088c2f33" alt="Traditional Warli Art"
+                        class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Warli Art & Tribal Culture</h3>
+                        <p>
+                            Home to the indigenous Warli tribe, known for their distinctive art style depicting daily
+                            life and beliefs through geometric patterns.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Festivals -->
+                <div class="relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1592306243116-0ff662878b9d"
+                        alt="Local Festival Celebration" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Festivals & Celebrations</h3>
+                        <p>
+                            Experience vibrant celebrations of Ganesh Chaturthi, tribal festivals, and traditional fairs
+                            throughout the year.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display text-3xl font-bold text-primary text-center mb-12">Explore Palghar</h2>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240745.89512289246!2d72.76269854794924!3d19.69661880683037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c6c63ee1c15%3A0x85e3c5b6e48b3cab!2sPalghar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645523452489!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+<p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+
+<div class="mt-2">
+    <a href="terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> |
+    <a href="privacy-policy.html" class="text-gray-400 hover:text-gray-200">Privacy Policy</a>
+</div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
