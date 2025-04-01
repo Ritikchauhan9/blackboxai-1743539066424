@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the hidden gems of Palghar - beaches, forts, temples, and rich cultural heritage. Plan your perfect getaway with Palghar Tourism.">
+    <meta name="keywords" content="Palghar tourism, Maharashtra tourism, beaches, forts, temples, Warli art, weekend getaway">
+    <title>Welcome to Palghar Tourism | Official Tourism Website</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./palghar-website/assets/images/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --color-primary: #1B4965;
+            --color-secondary: #62B6CB;
+            --color-accent: #5FA777;
+            --color-sand: #CAA67A;
+            --color-light: #F0F7F4;
+        }
+        .text-primary { color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .text-accent { color: var(--color-accent); }
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-light { background-color: var(--color-light); }
+        .font-sans { font-family: 'Poppins', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="font-sans bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="./" class="text-2xl font-display font-bold text-primary">
+                    Palghar Tourism
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="./palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="./palghar-website/destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="./palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="./palghar-website/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="./palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="./palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="./palghar-website/about.html" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="./palghar-website/destinations/index.html" class="text-gray-600 hover:text-primary">Destinations</a>
+                    <a href="./palghar-website/activities.html" class="text-gray-600 hover:text-primary">Activities</a>
+                    <a href="./palghar-website/travel-guide.html" class="text-gray-600 hover:text-primary">Travel Guide</a>
+                    <a href="./palghar-website/accommodation.html" class="text-gray-600 hover:text-primary">Stay</a>
+                    <a href="./palghar-website/contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[80vh] relative overflow-hidden">
+            <img src="./palghar-website/assets/images/pexels-pankaj-naringrekar-2079418269-29283305.jpg" 
+                 alt="Beautiful Palghar coastline" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="font-display text-5xl md:text-7xl font-bold mb-4">Welcome to Palghar</h1>
+                    <p class="text-xl md:text-2xl max-w-3xl mx-auto px-4">
+                        Discover Maharashtra's hidden coastal paradise
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <a href="./palghar-website/destinations/index.html" 
+                   class="bg-white rounded-lg p-8 text-center shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <i class="fas fa-map-marked-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary">Destinations</h3>
+                    <p class="text-gray-600 mt-2">Explore beautiful locations</p>
+                </a>
+
+                <a href="./palghar-website/activities.html" 
+                   class="bg-white rounded-lg p-8 text-center shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <i class="fas fa-hiking text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary">Activities</h3>
+                    <p class="text-gray-600 mt-2">Find exciting things to do</p>
+                </a>
+
+                <a href="./palghar-website/travel-guide.html" 
+                   class="bg-white rounded-lg p-8 text-center shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <i class="fas fa-route text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary">Travel Guide</h3>
+                    <p class="text-gray-600 mt-2">Plan your perfect trip</p>
+                </a>
+
+                <a href="./palghar-website/contact.html" 
+                   class="bg-white rounded-lg p-8 text-center shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <i class="fas fa-phone-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold text-primary">Contact</h3>
+                    <p class="text-gray-600 mt-2">Get in touch with us</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Palghar Tourism</h3>
+                    <p class="text-gray-400">
+                        Discover the beauty and culture of Palghar, Maharashtra's hidden coastal paradise.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./palghar-website/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="./palghar-website/destinations/index.html" class="hover:text-white">Destinations</a></li>
+                        <li><a href="./palghar-website/activities.html" class="hover:text-white">Activities</a></li>
+                        <li><a href="./palghar-website/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> N/A</li>
+                        <li><i class="fas fa-envelope mr-2"></i> palghartourisms@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Palghar Tourism. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="./palghar-website/terms.html" class="text-gray-400 hover:text-gray-200">Terms & Conditions</a> | 
+                    <a href="./palghar-website/privacy-policy.html" class="text-gray-400 hover:text-gray-200">Privacy Policy</a> |
+                    <a href="./palghar-website/image-credits.html" class="text-gray-400 hover:text-gray-200">Image Credits</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./palghar-website/assets/js/main.js"></script>
+</body>
+</html>
